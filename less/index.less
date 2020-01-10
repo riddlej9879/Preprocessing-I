@@ -84,14 +84,33 @@ html, body {
 	margin: 1%;
 }
 
-
+html {
+	display: flex;
+	justify-content: center;
+}
 body {
 	width: 75%;
+	@media (max-width: 500px){
+		width: 100%;
+	}
 }
 header {
 	.display-flex(space-evenly);
 	font-size: 2.2rem;
 	background-color: #00BFFF;
+
+	@media (max-width: 500px){
+		font-size: 1.3rem;
+		.display-flex(space-between);
+
+		.top_logo {
+			margin: 1%;
+			padding: 0%;
+			height: 12.5%;
+			width: 12.5%;
+		}
+		
+	}
 	nav {
 		width: 80%;
 		.display-flex(space-between);
@@ -121,6 +140,11 @@ h1 {
 }
 .header_content {
 	.display-flex(space-evenly);
+
+	@media (max-width: 500px){
+		.display-flex(center);
+		flex-direction: column;
+	}
 }
 .top_section {
 	border: 1px solid red;
@@ -135,6 +159,22 @@ h1 {
 	.box-padding;	
 	color: @important-color;
 	font-size: 1.6rem;
+
+	@media (max-width: 500px){
+		.display-flex(center);
+		flex-direction: column;
+		font-size: 1rem;
+
+		.left_side {
+			margin-bottom: 1%;
+			padding-bottom: 1%;
+			width: 85%;
+		}
+		.right_side {
+			font-size: 1.1rem;
+
+		}
+	}
 }
 
 .left_side {
